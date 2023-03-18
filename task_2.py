@@ -10,3 +10,10 @@
 --- b'class' - используйте маркировку b''
 --- используйте списки и циклы, не дублируйте функции
 """
+
+
+
+lst = [b'class', b'function', b'method']
+for i in lst:
+    print(f'{i} - {type(i)} - length {len(i)}')
+
