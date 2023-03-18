@@ -17,4 +17,3 @@ for word in words:
         print(f'{word} - {type(word)}')
     except UnicodeEncodeError:
         print(f"\033[31m Слово '{word}' невозможно записать в байтовом типе с помощью маркировки b' \033[0m")
-
