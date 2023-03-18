@@ -9,3 +9,11 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+words = ['attribute', 'класс', 'функция', 'type']
+
+for word in words:
+    try:
+        word = bytes(word, encoding='ascii')
+        print(f'{word} - {type(word)}')
+    except UnicodeEncodeError:
+        print(f"\033[31m Слово '{word}' невозможно записать в байтовом типе с помощью маркировки b' \033[0m")
