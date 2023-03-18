@@ -16,3 +16,22 @@
 --- '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430' - набор кодовых точек
 --- используйте списки и циклы, не дублируйте функции
 """
+
+
+def type_and_content_print(lst):
+    for i in lst:
+        print(f'{i} - {type(i)}')
+
+
+def conv_to_points(lst):
+    pointlst = []
+    for word in lst:
+        bw = word.encode('unicode_escape')
+        cw = bw.decode()
+        pointlst.append(cw)
+    return pointlst
+
+
+wlst = ['разработка', 'сокет', 'декоратор']
+type_and_content_print(wlst)
+type_and_content_print(conv_to_points(wlst))
